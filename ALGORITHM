@@ -1,0 +1,85 @@
+Algorithm: Bank System Using Linked List (Menu Driven)
+1. Start
+2. Define Structure
+Create a structure Node with:
+id
+name
+balance
+pointer next
+3. Initialize
+Set head = NULL
+4. Repeat Until User Chooses Exit
+Display Menu:
+Create Account
+Display Accounts
+Deposit Money
+Withdraw Money
+Delete Account
+Exit
+Input choice
+5. Perform Operation Based on Choice
+Case 1: Create Account
+Create a new node
+Input:
+ID
+Name
+Initial Balance
+Set newNode->next = NULL
+If head == NULL
+Set head = newNode
+Else
+Traverse to last node
+Attach new node at end
+Display success message
+Case 2: Display Accounts
+If head == NULL
+Print "No accounts available"
+Else
+Traverse from head
+For each node:
+Display ID, Name, Balance
+Case 3: Deposit Money
+Input account ID
+Call search function:
+Traverse list to find matching ID
+If account found:
+Input deposit amount
+Add amount to balance
+Print success message
+Else:
+Print "Account not found"
+Case 4: Withdraw Money
+Input account ID
+Search account
+If found:
+Input withdrawal amount
+If balance ≥ amount:
+Subtract amount
+Print success
+Else:
+Print "Insufficient Balance"
+Else:
+Print "Account not found"
+Case 5: Delete Account
+Input account ID
+Set:
+temp = head
+prev = NULL
+If first node matches ID:
+Move head to next node
+Delete old node
+Else:
+Traverse list to find node
+Keep track of previous node
+If not found:
+Print "Account not found"
+Else:
+Link prev->next = temp->next
+Delete node
+Print success message
+Case 6: Exit
+Terminate program
+Default Case
+Print "Invalid choice"
+6. End Loop When Choice = 6
+7. Stop
